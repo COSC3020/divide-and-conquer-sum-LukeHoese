@@ -27,10 +27,12 @@ Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
 The recurrence relation for the algorithm is T(n) = 3T(n/3)+O(n)
+
 The actual time complexity of the algortithm is Θ(nlogn)
+
 The algorithm divides into 3 parts each time we resurse, so we have log n "levels" of recursion,
 and each element is processed at each level, thus giving us a time complexity of n * log n
 
-If this explanation and reasoning is not enough I can try to go more in depth
-Time complexity is not my strongest area so I had to check back with the slides for merge sort
+If this explanation and reasoning is not enough I can try to go more in depth. 
+Time complexity is not my strongest area so I had to check back with the slides for merge sort. 
 Alternatively if I'm just entirely wrong a nudge in the right direction would be greatly appreciated :)
