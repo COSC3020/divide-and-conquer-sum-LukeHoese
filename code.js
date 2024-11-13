@@ -5,6 +5,10 @@ function divideAndConquerSum(x)
 
 function helperSum(x, lo, hi) 
 {
+    if (lo > hi) 
+    {
+        return 0;
+    }
     if(lo === hi)
     {
         return x[lo]
