@@ -1,19 +1,18 @@
 function divideAndConquerSum(x) 
 {
-    var tmp = 0;
-    helperSum(x, 0, x.length - 1, tmp)
-    console.log(tmp);
-}
-
-function helperSum(x, lo, hi, tmp) 
-{
     if (x == [])
     {
         return 0;
     }
+    var tmp = 0;
+    helperSum(x, 0, x.length - 1)
+}
+
+function helperSum(x, lo, hi) 
+{
     if(lo >= hi)
     {
-        return helperSum(x, lo, midLow, tmp) + helperSum(x, midLow, midHigh, tmp) + helperSum(x, midHigh, hi, tmp)
+        return helperSum(x, lo, midLow) + helperSum(x, midLow, midHigh) + helperSum(x, midHigh, hi)
     }
     if ((lo+hi)%3 <= 1)
     {
