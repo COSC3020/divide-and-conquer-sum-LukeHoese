@@ -1,3 +1,13 @@
+/*
+I certify that I have listed all sources used to complete this exercise, including the use
+of any Large Language Models. All of the work is my own, except where stated
+otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
+suspected, charges may be filed against me without prior notice.
+
+I wrote an original version of the code from scratch with a variety of issues
+which I copied into chat GPT for help debugging. I worked through each issue step by step
+and made sure I understood every change I made.
+*/
 function divideAndConquerSum(x) 
 {
     return helperSum(x, 0, x.length - 1)
