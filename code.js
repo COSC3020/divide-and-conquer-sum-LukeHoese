@@ -1,6 +1,6 @@
 function divideAndConquerSum(x) 
 {
-    helperSum(x, 0, x.length - 1)
+    return helperSum(x, 0, x.length - 1)
 }
 
 function helperSum(x, lo, hi) 
