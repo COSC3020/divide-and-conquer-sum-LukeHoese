@@ -7,9 +7,13 @@ function divideAndConquerSum(x)
 
 function helperSum(x, lo, hi, tmp) 
 {
+    if (x == [])
+    {
+        return 0;
+    }
     if(lo >= hi)
     {
-    return helperSum(x, lo, midLow, tmp) + helperSum(x, midLow, midHigh, tmp) + helperSum(x, midHigh, hi, tmp)
+        return helperSum(x, lo, midLow, tmp) + helperSum(x, midLow, midHigh, tmp) + helperSum(x, midHigh, hi, tmp)
     }
     if ((lo+hi)%3 <= 1)
     {
