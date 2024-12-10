@@ -26,13 +26,11 @@ and solve it as we did in the lectures. Give the final $\Theta$ complexity.
 Describe your reasoning and the conclusion you've come to. Your reasoning is the
 most important part. Add your answer to this markdown file.
 
-The recurrence relation for the algorithm is T(n) = 3T(n/3)+O(n)
+On my initial pass of this assignment I was less familiar with recurrence relations than I am now
 
-The actual time complexity of the algortithm is Θ(nlogn)
-
-The algorithm divides into 3 parts each time we resurse, so we have log n "levels" of recursion,
-and each element is processed at each level, thus giving us a time complexity of n * log n
-
-If this explanation and reasoning is not enough I can try to go more in depth. 
-Time complexity is not my strongest area so I had to check back with the slides for merge sort. 
-Alternatively if I'm just entirely wrong a nudge in the right direction would be greatly appreciated :)
+At each step of recursion, we split our array of numbers into three seperate arrays each of size n/3 (with n being number of elements in array at start of call)
+If helperSum is called with an array empty array or an array with only 1 element, it returns 0 or the singular value to be added to the sum.
+The work done at each level is a simple constant addition
+This gives us a recurrence relation of:
+T(n) { 1 if n <= 1  
+       3T(n/3) + 1 if n > 1
