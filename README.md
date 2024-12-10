@@ -32,5 +32,16 @@ At each step of recursion, we split our array of numbers into three seperate arr
 If helperSum is called with an array empty array or an array with only 1 element, it returns 0 or the singular value to be added to the sum.
 The work done at each level is a simple constant addition
 This gives us a recurrence relation of:  
-T(n) { 1 if n <= 1  
-       3T(n/3) + 1 if n > 1
+T(n) { 1 if n <= 1, 3T(n/3) + 1 if n > 1
+
+Going another layer deep assuming n > 1 to show behavior:  
+T(n) = 3T(n/3) + 1
+sub back in for T(n)
+T(n) = 3(3T(n/3*3) + 1) + 1
+T(n) = 9T(n/9) + 4
+(ignore constant factor)
+T(n) = 3<sup>i</sup>T(n/3<sup>i</sup>)
+
+Ignoring our constant factor and knowing that our exit/base case of our recursion is 1, we solve for n/3<sup>i</sup> = 1, which gives us a value for i of log<sub>3</sub>n. substitutiong that back in gives us T(n) = 3<sup>log<sub>3</sub>n</sup>, which simplifies to simply n
+
+This gives us our final Time complexity of $T(n)$, which makes much more sense. We are performing an amount of addition operations linear to the number of elements put in.
