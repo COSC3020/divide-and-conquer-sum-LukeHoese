@@ -44,4 +44,4 @@ T(n) = 3<sup>i</sup>T(n/3<sup>i</sup>)
 
 Ignoring our constant factor and knowing that our exit/base case of our recursion is 1, we solve for n/3<sup>i</sup> = 1, which gives us a value for i of log<sub>3</sub>n. substitutiong that back in gives us T(n) = 3<sup>log<sub>3</sub>n</sup>, which simplifies to simply n
 
-This gives us our final Time complexity of $T(n)$, which makes much more sense. We are performing an amount of addition operations linear to the number of elements put in.
+This gives us our final Time complexity of $\Theta$(n), which makes much more sense. We are performing an amount of addition operations linear to the number of elements put in.
