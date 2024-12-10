@@ -31,6 +31,6 @@ On my initial pass of this assignment I was less familiar with recurrence relati
 At each step of recursion, we split our array of numbers into three seperate arrays each of size n/3 (with n being number of elements in array at start of call)
 If helperSum is called with an array empty array or an array with only 1 element, it returns 0 or the singular value to be added to the sum.
 The work done at each level is a simple constant addition
-This gives us a recurrence relation of:
+This gives us a recurrence relation of:  
 T(n) { 1 if n <= 1  
        3T(n/3) + 1 if n > 1
